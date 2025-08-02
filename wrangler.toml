@@ -1,6 +1,6 @@
-name = "RSS_to_Telegram"
-main = "src/worker.js"
-compatibility_date = "2024-01-01"
+name = "rss-to-telegram"
+main = "src/worker-optimized-final.js"
+compatibility_date = "2025-01-08"
 
 # KV 命名空间用于存储配置和状态
 [[kv_namespaces]]

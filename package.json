@@ -1,8 +1,8 @@
 {
-  "name": "RSS_to_Telegram",
-  "version": "1.0.0",
-  "description": "基于 Cloudflare Workers 的 RSS 推送平台",
-  "main": "src/worker.js",
+  "name": "rss-to-telegram",
+  "version": "2.1.0",
+  "description": "基于 Cloudflare Workers 的 RSS 推送平台，支持 Telegraph 文章转换",
+  "main": "src/worker-optimized-final.js",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
@@ -12,12 +12,13 @@
   "keywords": [
     "rss",
     "telegram",
+    "telegraph",
     "cloudflare-workers",
     "push-notifications"
   ],
   "author": "RSS Pusher",
   "license": "MIT",
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.27.0"
   }
 }
