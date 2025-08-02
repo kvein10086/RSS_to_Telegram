@@ -1,5 +1,5 @@
 {
-  "name": "rss-to-telegram",
+  "name": "rsstotelegram",
   "version": "2.1.0",
   "description": "基于 Cloudflare Workers 的 RSS 推送平台，支持 Telegraph 文章转换",
   "main": "src/worker-optimized-final.js",

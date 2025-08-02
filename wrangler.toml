@@ -1,12 +1,13 @@
-name = "rss-to-telegram"
-main = "src/worker-optimized-final.js"
+name = "rsstotelegram"
+main = "src/worker-auto-kv.js"
 compatibility_date = "2025-01-08"
 
 # KV 命名空间用于存储配置和状态
-[[kv_namespaces]]
-binding = "RSS_CONFIG"
-id = "your-kv-namespace-id"
-preview_id = "your-preview-kv-namespace-id"
+# 注意：首次部署时请先注释掉 KV 配置，部署成功后再创建 KV 命名空间
+# [[kv_namespaces]]
+# binding = "RSS_CONFIG"
+# id = "your-kv-namespace-id"
+# preview_id = "your-preview-kv-namespace-id"
 
 # Cron 触发器，每30分钟检查一次RSS更新
 [triggers]
