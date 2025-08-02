@@ -326,7 +326,7 @@ KV namespace: RSS_CONFIG (选择刚创建的命名空间)
 }
 
 // 简化的 Web 界面（从原文件复制核心部分）
-const WEB_INTERFACE = \`
+const WEB_INTERFACE = `
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -485,11 +485,11 @@ const WEB_INTERFACE = \`
                 if (data.sources && data.sources.length > 0) {
                     listDiv.innerHTML = '<h3>📋 当前 RSS 源:</h3>' + 
                         data.sources.map(source => 
-                            \`<div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
-                                <strong>\${source.name}</strong><br>
-                                <small>\${source.url}</small>
-                                <button class="btn" style="float: right; padding: 5px 10px;" onclick="removeRSSSource('\${source.url}')">🗑️ 删除</button>
-                            </div>\`
+                            `<div style="margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                                <strong>${source.name}</strong><br>
+                                <small>${source.url}</small>
+                                <button class="btn" style="float: right; padding: 5px 10px;" onclick="removeRSSSource('${source.url}')">🗑️ 删除</button>
+                            </div>`
                         ).join('');
                     
                     document.getElementById('rss-count').textContent = data.sources.length;
@@ -540,10 +540,10 @@ const WEB_INTERFACE = \`
                     resultDiv.innerHTML = '<p class="success">✅ Telegram 配置保存成功</p>';
                     updateTelegramStatus(true);
                 } else {
-                    resultDiv.innerHTML = \`<p class="error">❌ 保存失败: \${result.error}</p>\`;
+                    resultDiv.innerHTML = `<p class="error">❌ 保存失败: ${result.error}</p>`;
                 }
             } catch (error) {
-                document.getElementById('telegram-result').innerHTML = \`<p class="error">❌ 保存失败: \${error.message}</p>\`;
+                document.getElementById('telegram-result').innerHTML = `<p class="error">❌ 保存失败: ${error.message}</p>`;
             }
         }
 
@@ -556,10 +556,10 @@ const WEB_INTERFACE = \`
                 if (response.ok) {
                     resultDiv.innerHTML = '<p class="success">✅ Telegram 测试消息发送成功</p>';
                 } else {
-                    resultDiv.innerHTML = \`<p class="error">❌ 测试失败: \${result.error}</p>\`;
+                    resultDiv.innerHTML = `<p class="error">❌ 测试失败: ${result.error}</p>`;
                 }
             } catch (error) {
-                document.getElementById('telegram-result').innerHTML = \`<p class="error">❌ 测试失败: \${error.message}</p>\`;
+                document.getElementById('telegram-result').innerHTML = `<p class="error">❌ 测试失败: ${error.message}</p>`;
             }
         }
 
@@ -588,10 +588,10 @@ const WEB_INTERFACE = \`
                     document.getElementById('rss-url').value = '';
                     loadRSSList();
                 } else {
-                    resultDiv.innerHTML = \`<p class="error">❌ 添加失败: \${result.error}</p>\`;
+                    resultDiv.innerHTML = `<p class="error">❌ 添加失败: ${result.error}</p>`;
                 }
             } catch (error) {
-                document.getElementById('rss-result').innerHTML = \`<p class="error">❌ 添加失败: \${error.message}</p>\`;
+                document.getElementById('rss-result').innerHTML = `<p class="error">❌ 添加失败: ${error.message}</p>`;
             }
         }
 
@@ -610,10 +610,10 @@ const WEB_INTERFACE = \`
                 if (response.ok) {
                     loadRSSList();
                 } else {
-                    alert(\`删除失败: \${result.error}\`);
+                    alert(`删除失败: ${result.error}`);
                 }
             } catch (error) {
-                alert(\`删除失败: \${error.message}\`);
+                alert(`删除失败: ${error.message}`);
             }
         }
 
@@ -624,12 +624,12 @@ const WEB_INTERFACE = \`
                 const resultDiv = document.getElementById('rss-result');
                 
                 if (response.ok) {
-                    resultDiv.innerHTML = \`<p class="success">✅ RSS 检查完成，处理了 \${result.processed || 0} 个源</p>\`;
+                    resultDiv.innerHTML = `<p class="success">✅ RSS 检查完成，处理了 ${result.processed || 0} 个源</p>`;
                 } else {
-                    resultDiv.innerHTML = \`<p class="error">❌ 检查失败: \${result.error}</p>\`;
+                    resultDiv.innerHTML = `<p class="error">❌ 检查失败: ${result.error}</p>`;
                 }
             } catch (error) {
-                document.getElementById('rss-result').innerHTML = \`<p class="error">❌ 检查失败: \${error.message}</p>\`;
+                document.getElementById('rss-result').innerHTML = `<p class="error">❌ 检查失败: ${error.message}</p>`;
             }
         }
 
@@ -655,16 +655,16 @@ const WEB_INTERFACE = \`
                 if (response.ok) {
                     resultDiv.innerHTML = '<p class="success">✅ Telegraph 配置保存成功</p>';
                 } else {
-                    resultDiv.innerHTML = \`<p class="error">❌ 保存失败: \${result.error}</p>\`;
+                    resultDiv.innerHTML = `<p class="error">❌ 保存失败: ${result.error}</p>`;
                 }
             } catch (error) {
-                document.getElementById('telegraph-result').innerHTML = \`<p class="error">❌ 保存失败: \${error.message}</p>\`;
+                document.getElementById('telegraph-result').innerHTML = `<p class="error">❌ 保存失败: ${error.message}</p>`;
             }
         }
     </script>
 </body>
 </html>
-\`;
+`;
 
 // 简化的安全工具类
 class SecurityUtils {
