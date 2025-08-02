@@ -1,0 +1,18 @@
+name = "RSS_to_Telegram"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+# KV 命名空间用于存储配置和状态
+[[kv_namespaces]]
+binding = "RSS_CONFIG"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+# Cron 触发器，每30分钟检查一次RSS更新
+[triggers]
+crons = ["*/30 * * * *"]
+
+# 环境变量（可选，也可以通过Web界面配置）
+[vars]
+# TELEGRAM_BOT_TOKEN = "your-bot-token"
+# TELEGRAM_CHAT_ID = "your-chat-id"

@@ -1,0 +1,37 @@
+{
+  "name": "RSS_to_Telegram",
+  "description": "基于 Cloudflare Workers 的 RSS Telegram 推送平台",
+  "repository": "https://github.com/kvein10086/RSS_to_Telegram",
+  "compatibility_date": "2024-01-01",
+  "main": "src/worker.js",
+  "kv_namespaces": [
+    {
+      "binding": "RSS_CONFIG",
+      "preview_id": "",
+      "id": ""
+    }
+  ],
+  "crons": [
+    "*/30 * * * *"
+  ],
+  "vars": {},
+  "secrets": {},
+  "usage_model": "bundled",
+  "build": {
+    "command": "",
+    "cwd": "",
+    "watch_dir": "src"
+  },
+  "env": {
+    "production": {
+      "vars": {},
+      "kv_namespaces": [
+        {
+          "binding": "RSS_CONFIG",
+          "preview_id": "",
+          "id": ""
+        }
+      ]
+    }
+  }
+}
